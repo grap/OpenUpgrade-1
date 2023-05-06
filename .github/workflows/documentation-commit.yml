@@ -19,6 +19,10 @@ jobs:
         with:
           ref: "documentation"
 
+      - name: Git status (1)
+        run: |
+          sh git status
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -58,6 +62,10 @@ jobs:
         run: |
           # try to build the documentation
           sh ./build_openupgrade_docs
+
+      - name: Git status (2)
+        run: |
+          sh git status
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
