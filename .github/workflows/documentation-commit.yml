@@ -24,7 +24,7 @@ jobs:
 
       - name: Git status (1)
         run: |
-          sh git status
+          git status
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -68,7 +68,7 @@ jobs:
 
       - name: Git status (2)
         run: |
-          sh git status
+          git status
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
