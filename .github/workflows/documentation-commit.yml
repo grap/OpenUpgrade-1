@@ -7,7 +7,8 @@ name: Build and commit documentation
 
 on:
   push:
-    branches: ["documentation"]
+    branches: ["16.0"]
+    paths: ['docsource/modules150-160.rst']
 
 jobs:
   documentation-commit:
