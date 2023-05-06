@@ -15,16 +15,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install git
-        run: |
-          sudo apt install git
+        run: sudo apt install git
       - name: Check out OpenUpgrade Documentation
         uses: actions/checkout@v2
         with:
           ref: "documentation"
+          path: openupgrade
 
       - name: Git status (1)
-        run: |
-          git status
+        working-directory: ./openupgrade
+        run: git status
+
+      - name: ls (1-a)
+        working-directory: ./openupgrade
+        run: ls -ailh
+        
+      - name: ls (1-b)
+        working-directory: ./openupgrade/docs
+        run: ls -ailh
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -60,19 +68,28 @@ jobs:
       - name: Requirements Installation
         run: |
           pip install -q -r odoo/requirements.txt
-          pip install -r ./requirements.txt
+          pip install -r openupgrade/requirements.txt
       - name: OpenUpgrade Docs
         run: |
           # try to build the documentation
-          sh ./build_openupgrade_docs
+          sh openupgrade/build_openupgrade_docs
 
       - name: Git status (2)
-        run: |
-          git status
+        run: git status
+
+      - name: ls (2)
+        working-directory: ./openupgrade
+        run: ls -ailh
+
+
+      - name: ls (2-b)
+        working-directory: ./openupgrade/docs
+        run: ls -ailh
 
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
+          cwd: 'openupgrade'
           add: "docs"
           default_author: github_actions
           message: "[UPD] HTML documentation"
