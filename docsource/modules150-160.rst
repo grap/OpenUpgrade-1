@@ -11,6 +11,8 @@ TEST5 : change in 16.0 branch, in modules150-160.rst file.
 
 TEST6 : change in 16.0 branch, in modules150-160.rst file.
 
+TEST7 : change in 16.0 branch, in modules150-160.rst file.
+
 
 .. include:: coverage_legend.rst
 
