@@ -3,7 +3,7 @@
 # so that the changes are visible on the website
 # https://oca.github.io/OpenUpgrade/
 
-name: Build and commit documentation
+name: Build and commit documentation 16.0
 
 on:
   push:
