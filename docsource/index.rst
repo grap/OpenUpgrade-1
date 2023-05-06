@@ -8,6 +8,7 @@
 Welcome to OpenUpgrade's documentation!
 +++++++++++++++++++++++++++++++++++++++
 
+TEST1 : write on documentation branch.
 
 **If you just want to migrate your database and don't care about the technical details, refer to** :doc:`migration_details`
 
