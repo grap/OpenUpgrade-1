@@ -93,3 +93,6 @@ jobs:
           add: "docs"
           default_author: github_actions
           message: "[UPD] HTML documentation"
+
+      - name: Git status (3)
+        run: git status
