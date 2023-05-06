@@ -4,7 +4,7 @@ OUTPUT_DIR=$(realpath $(dirname $0)/./docs)
 SOURCE_DIR=$(realpath $(dirname $0)/./docsource)
 ODOO_PYTHON_PATH=$(realpath $(dirname $0)/./odoo)
 
-BASE_URL=https://raw.githubusercontent.com/OCA/OpenUpgrade/
+BASE_URL=https://raw.githubusercontent.com/grap/OpenUpgrade-1/
 DOC_PARTS="7.0/openerp/openupgrade/doc/source/modules50-60.rst
 7.0/openerp/openupgrade/doc/source/modules60-61.rst
 7.0/openerp/openupgrade/doc/source/modules61-70.rst
