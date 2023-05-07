@@ -4,6 +4,12 @@
 # so that the changes are visible on the website
 # https://oca.github.io/OpenUpgrade/
 
+# To be active, this workflow that targets other branches
+# must be present on the main branch.
+# When switching the main version from 16.0 to 17.0, 
+# - in the 16.0 branch, delete this file, 
+# - in the 17.0 branch, add the references to the 17.0 branch
+
 name: Build and commit documentation (from other branch)
 
 on:
