@@ -1,26 +1,14 @@
-# On each push in 14.0 / 15.0 / 16.0 branch,
+# On each push in 16.0 branch,
 # AND if the coverage file changed,
 # build documentation branch and commit the changes
 # so that the changes are visible on the website
 # https://oca.github.io/OpenUpgrade/
 
-# To be active, this workflow that targets other branches
-# must be present on the main branch.
-# When switching the main version from 16.0 to 17.0, 
-# - in the 16.0 branch, delete this file, 
-# - in the 17.0 branch, add the references to the 17.0 branch
-
-name: Build and commit documentation (FROM OTHER BRANCH)
+name: Build and commit documentation (16.0)
 
 on:
   push:
-    branches:
-      - "14.0"
-      - "15.0"
-      - "16.0"
     paths:
-      - "docsource/modules130-140.rst"
-      - "docsource/modules140-150.rst"
       - "docsource/modules150-160.rst"
 
 jobs:
