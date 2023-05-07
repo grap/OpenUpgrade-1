@@ -16,8 +16,8 @@ on:
   push:
     branches:
       - "15.0"
-    paths:
-      - "docsource/modules140-150.rst"
+#    paths:
+#      - "docsource/modules140-150.rst"
 
 jobs:
   documentation-commit:
