@@ -10,14 +10,18 @@
 # - in the 16.0 branch, delete this file, 
 # - in the 17.0 branch, add the references to the 17.0 branch
 
-name: Build and commit documentation (from other branch)
+name: Build and commit documentation (FROM OTHER BRANCH)
 
 on:
   push:
     branches:
+      - "14.0"
       - "15.0"
-#    paths:
-#      - "docsource/modules140-150.rst"
+      - "16.0"
+    paths:
+      - "docsource/modules130-140.rst"
+      - "docsource/modules140-150.rst"
+      - "docsource/modules150-160.rst"
 
 jobs:
   documentation-commit:
